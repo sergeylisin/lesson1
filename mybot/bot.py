@@ -1,3 +1,4 @@
+import settings
 import logging
 
 from telegram.ext import Updater,CommandHandler
@@ -16,7 +17,7 @@ def greet_user(update ,context):
     
 
 def main():
-    mybot = Updater('1521578217:AAEnXxtMOFj1Y_1IhHAjVQBR5sRtRxVpC2w',use_context=True,request_kwargs=PROXY)
+    mybot = Updater(settings.KEY,use_context=True,request_kwargs=PROXY)
     logging.info("бот стартовал")
     mybot.dispatcher.add_handler(CommandHandler('start',greet_user))
     mybot.start_polling()
