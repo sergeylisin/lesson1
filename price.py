@@ -1,3 +1,5 @@
+#
+
 def format_price(price):
     p = int(price)
     ret = f'Цена: {p} руб.'
